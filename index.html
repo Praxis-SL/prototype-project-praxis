@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Praxis — Aprende programando</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:ital,wght@0,400;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <!-- LANDING -->
+    <section class="screen active" id="screen-landing">
+      <div class="landing-inner">
+        <img
+          class="landing-logo"
+          src="assets/praxis_logo.png"
+          alt="Praxis"
+          onerror="this.style.display = 'none'"
+        />
+        <div class="landing-eyebrow">Track 01 · JavaScript desde cero</div>
+        <h1 class="landing-h1">
+          Escribe.<br /><em>Ejecuta.</em><br /><b>Avanza.</b>
+        </h1>
+        <p class="landing-sub">
+          No videos. No teoría infinita. Código real desde el primer minuto — y
+          la plataforma valida si funciona antes de dejarte avanzar.
+        </p>
+        <div class="landing-cta">
+          <button class="btn-cta" onclick="goTo('track')">
+            Empezar a programar →
+          </button>
+        </div>
+        <div class="landing-pills">
+          <span class="lpill"
+            ><span class="lpill-dot"></span>Editor integrado</span
+          >
+          <span class="lpill">Validación automática</span>
+          <span class="lpill">5 módulos · ~50 min</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRACK -->
+    <section class="screen" id="screen-track">
+      <nav class="topbar">
+        <div class="tb-logo">
+          <img
+            src="assets/praxis_logo.png"
+            alt=""
+            onerror="this.style.display = 'none'"
+          />
+          Praxis
+        </div>
+        <div class="tb-right">
+          <div class="xp-counter" id="xp-display">⚡ 0 XP</div>
+          <div class="prog-txt" id="prog-txt">0/5</div>
+          <div class="prog-wrap">
+            <div class="prog-fill" id="prog-fill"></div>
+          </div>
+        </div>
+      </nav>
+      <div class="track-hero">
+        <div class="t-eyebrow">Track 01 · Fundamentos de JavaScript</div>
+        <h2 class="t-title">Aprende JS<br />escribiendo JS</h2>
+        <p class="t-desc">
+          Cada módulo: concepto mínimo → reto de código → validación real. Sin
+          saltar pasos.
+        </p>
+        <div class="t-stats">
+          <div>
+            <div class="tstat-val">5</div>
+            <div class="tstat-label">Módulos</div>
+          </div>
+          <div>
+            <div class="tstat-val">~50</div>
+            <div class="tstat-label">Minutos</div>
+          </div>
+          <div>
+            <div class="tstat-val">JS</div>
+            <div class="tstat-label">Lenguaje</div>
+          </div>
+        </div>
+      </div>
+      <div class="mod-list" id="mod-list"></div>
+    </section>
+
+    <!-- MODULE -->
+    <section class="screen" id="screen-module">
+      <nav class="mod-topbar">
+        <button class="btn-back" onclick="goTo('track')">← Volver</button>
+        <div class="mod-topbar-title" id="mod-topbar-title">Módulo</div>
+        <div class="step-dots" id="step-dots"></div>
+      </nav>
+      <div class="lesson-body" id="lesson-body"></div>
+    </section>
+  </body>
+</html>
